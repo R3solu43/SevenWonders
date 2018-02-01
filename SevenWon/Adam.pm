@@ -3,6 +3,7 @@ $| = 1;
 use strict;
 use Data::Dumper;
 use SevenWon::Cards;
+# use Switch;
 
 #Game State Engine
 initializeStateMap( );
@@ -54,10 +55,16 @@ sub canBuildAlone {
 }
 
 sub performAction {
-                #Update the game state based on the action performed
-                my ($playerID, $action) = @_;
+        #Update the game state based on the action performed
+        my ($playerID, $action) = @_;
+        #Game state parameter that needs to get updated is dependent on the action being performed
+        my $actionCode = substr( $action, 0, 1);
+        # switch ($actionCode) {
+                # case "B"      {       }
+                # case "D"      {        }
+                # case "W"     {       }  
                 
-        
+        # }        
  }
 
 #The game state can be described as an array of integer values. The game state parameter map
